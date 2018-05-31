@@ -1,0 +1,68 @@
+#!/bin/bash
+
+gid=$(id -g)			# Get the current user's GID
+hive_sbin="/hive/sbin"		# Hive's superuser binary dir
+amd_oc="$hive_sbin/amd-oc"	# Path to amd-oc
+
+# GitHub raw data URL for the AMD OC patch file
+patch_url="https://raw.githubusercontent.com/jfx41/hiveos/master/AMD/amd-oc.patch"
+
+# Short URL to the main amd-oc-patch script
+script_url="https://goo.gl/pJEzAQ"
+
+# Make sure we are root
+if [ $gid != 0 ]
+then
+	echo "You aren't root.  Aborting."
+	exit 1
+fi
+
+# Make sure this is HiveOS and /hive/sbin is a directory
+if [ ! -d $hive_sbin ]
+then
+	echo "Is this HiveOS?  I can't find /hive/sbin."
+	exit 1
+fi
+
+# Make sure /hive/sbin/amd-oc is a file
+if [ ! -f $amd_oc ]
+then
+	echo "Bailing out, $amd_oc doesn't appear to exist."
+	exit 1
+fi
+
+# If we get here, then let's do this thing
+echo "Starting AMD OC patch process ..."
+echo
+
+cd $hive_sbin
+
+# Does all the work here
+curl -s $patch_url | patch --verbose --backup
+
+echo
+echo "AMD OC patching complete."
+echo
+
+# Go back to our home directory so we can add an alias
+cd
+
+echo "Attempting to add an alias: amd-oc-patch"
+check=$(grep amd-oc-patch ~/.bash_aliases)
+
+# If this is empty, we haven't added it before
+if [ -z "$check" ]
+then
+	cat <<EOA >> ~/.bash_aliases
+alias amd-oc-patch="curl -Ls $script_url | bash"
+EOA
+
+	echo "	Alias 'amd-oc-patch' added."
+	echo "	You can use that command to patch amd-oc after HiveOS upgrades."
+else
+	echo "	Alias 'amd-oc-patch' exists."
+fi
+
+exit 0
+
+# EOF
