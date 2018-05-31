@@ -1,4 +1,4 @@
-# AMD overclocking patches for undervolting
+# AMD patches for undervolting
 
 I've pretty much automated the entire process and made it simple to reapply the patch after HiveOS upgrades overwrite the changes to the amd-oc script.
 
