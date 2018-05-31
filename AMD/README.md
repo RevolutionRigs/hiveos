@@ -42,11 +42,11 @@ Sia Coin: 2976b8836ab38c51acbbd9f96f02674a62761251053ef9e5b9f9c1feaed5ea0022728e
 
 ## Initial patch command
 ```
-1. curl -Ls https://goo.gl/pJEzAQ | bash
+1. curl -Ls https://goo.gl/k7nGeB | bash
 ```
 
 ```
-root@hiveos:~# curl -Ls https://goo.gl/pJEzAQ | bash
+root@hiveos:~# curl -Ls https://goo.gl/k7nGeB | bash
 Starting AMD OC patch process ...
 
 Hmm...  Looks like a new-style context diff to me...
@@ -84,7 +84,7 @@ alias s='systemctl'
 alias j='journalctl'
 alias sr='screen -r'
 alias sx='screen -x'
-alias amd-oc-patch="curl -Ls https://goo.gl/pJEzAQ | bash"
+alias amd-oc-patch="curl -Ls https://goo.gl/k7nGeB | bash"
 ```
 
 
@@ -106,7 +106,7 @@ root@hiveos:~# . .bash_aliases
 ```
 root@hiveos:~# alias
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-alias amd-oc-patch='curl -Ls https://goo.gl/pJEzAQ | bash'
+alias amd-oc-patch='curl -Ls https://goo.gl/k7nGeB | bash'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
