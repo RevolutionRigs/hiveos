@@ -62,4 +62,4 @@ YOU MUST DO THE FOLLOWING:
   3.2 Set --gpu with a comma seperated list of all of your GPUs:                    --gpus 0,1,2,3,4,5
   3.3 Set --algo to a value 0-10 (currently only 0, 1, 10 are supported for stats): --algo 10
 
-FINAL EXTRA CONFIG FOR 6 GPUs: --intensity 10,10,10,10,10,10 --gpus 0,1,2,3,4,5 --algo 10
+FINAL EXTRA CONFIG FOR 6 GPUs: --intensity 10,10,10,10,10,10 --gpu 0,1,2,3,4,5 --algo 10
