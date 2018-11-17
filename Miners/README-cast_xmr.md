@@ -58,8 +58,8 @@ YOU MUST DO THE FOLLOWING:
   1. Set "Miner name" to: cast_xmr
   2. Set "Installation URL" to: https://github.com/RevolutionRigs/hiveos/raw/master/Miners/cast_xmr-1.6.0.tar.gz
   3. In the "Extra config arguments" section add:
-  3.1 Set --algo to a value 0-10 (currently only 0, 1, 10 are supported for stats): --algo 10
-  3.2 Set --intensity to a value 1-10 for each GPU:                                 --intensity 10,10,10,10,10,10
-  3.3 Set --gpu with a comma seperated list of all of your GPUs:                    --gpus 0,1,2,3,4,5
+  3.1 Set --intensity to a value 1-10 for each GPU:                                 --intensity 10,10,10,10,10,10
+  3.2 Set --gpu with a comma seperated list of all of your GPUs:                    --gpus 0,1,2,3,4,5
+  3.3 Set --algo to a value 0-10 (currently only 0, 1, 10 are supported for stats): --algo 10
 
-FINAL EXTRA CONFIG FOR 6 GPUs: --algo 10 --intensity 10,10,10,10,10,10 --gpus 0,1,2,3,4,5
+FINAL EXTRA CONFIG FOR 6 GPUs: --intensity 10,10,10,10,10,10 --gpus 0,1,2,3,4,5 --algo 10
