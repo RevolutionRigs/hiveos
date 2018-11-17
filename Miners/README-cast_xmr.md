@@ -10,7 +10,7 @@
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
+```
 Generic options:
   -h [ --help ]                 show this help message
   -O [ --opencl ] arg           index of the OpenCL plattform to use (-1 for
@@ -50,7 +50,7 @@ Optimizations:
                                 shares
   --ratewatchdog                enable watchdog on hash rate which resets a GPU
                                 if necessary
-
+```
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 YOU MUST DO THE FOLLOWING:
